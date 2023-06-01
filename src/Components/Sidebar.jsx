@@ -1,48 +1,52 @@
 import React, { useState } from 'react'
-
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 function Sidebar() {
-    function hide(){
-       let bars =  document.getElementById("bars")
-       let ul =  document.getElementById("ul")
-       let x =  document.getElementById("x")
-    
-       if(x.style.display = "none"){
-        x.style.display = "block"   
-        ul.style.display = "flex"   
-        bars.style.display = "none"
-       }
+    const [bg, setBg] = useState("bg-gray-900")
+    function hide() {
+        let bars = document.getElementById("bars")
+        let ul = document.getElementById("ul")
+        let x = document.getElementById("x")
+        if (x.style.display = "none") {
+            x.style.display = "block"
+            ul.style.display = "flex"
+            bars.style.display = "none"
+        } 
+        x.style.color = "#111827"
+        setBg("[#EFEEF1]")
     }
-    
-    function hide2(){
-        let bars =  document.getElementById("bars")
-        let x =  document.getElementById("x")
-        let ul =  document.getElementById("ul")
-        if(bars.style.display = "none"){
-         bars.style.display = "block"   
-        ul.style.display = "none"   
-         x.style.display = "none"
+
+    function hide2() {
+        let bars = document.getElementById("bars")
+        let x = document.getElementById("x")
+        let ul = document.getElementById("ul")
+        if (bars.style.display = "none") {
+            bars.style.display = "block"
+            ul.style.display = "none"
+            x.style.display = "none"
         }
-     }
-    const [display,setDisplay] = useState("")
-  return (
-    <div className='w-fit bg-gray-800 text-gray-50'>
-        <svg onClick={hide} id="bars" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 hover:scale-110 cursor-pointer h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-</svg>
-<svg onClick={hide2} id='x' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 hidden hover:scale-110 cursor-pointer  h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-</svg>
+        setBg("bg-gray-900")
+    }
 
 
-        <ul id='ul' className=' hidden flex-col space-y-2 font-semibold    p-4'>
-            <li className=' hover:scale-110 hover:shadow-gray-500 cursor-pointer  bg-black p-1 rounded-md text-center shadow-sm shadow-black '>HOME</li>
-            <li className=' hover:scale-110 hover:shadow-gray-500 cursor-pointer  bg-black p-1 rounded-md text-center shadow-sm shadow-black '>ABOUT US</li>
-            <li className=' hover:scale-110 hover:shadow-gray-500 cursor-pointer  bg-black p-1 rounded-md text-center shadow-sm shadow-black '>TOOLS</li>
-            <li className=' hover:scale-110 hover:shadow-gray-500 cursor-pointer  bg-black p-1 rounded-md text-center shadow-sm shadow-black '>SERVICES</li>
-            <li className=' hover:scale-110 hover:shadow-gray-500 cursor-pointer  bg-black p-1 rounded-md text-center shadow-sm shadow-black '>MORE</li>
-        </ul>
-    </div>
-  )
+    return (
+        <div className={`w-screen h-[100vh]  bg-${bg} flex justify-center items-center   absolute right-0   top-0 z-50  sm:hidden `}>
+            <div className='flex p-1 justify-between absolute right-0 top-1 '>
+                <Bars3Icon onClick={hide} id="bars" className={`w-8 hover:scale-110   text-white cursor-pointer  h-8`} />
+                <XMarkIcon onClick={hide2} id='x' className={`w-8 hidden hover:scale-110   text-white cursor-pointer  h-8`} />
+            </div>
+
+            <ul id='ul' className=' hidden   flex-col space-y-0  justify-center items-center font-semibold p-6 '>
+                
+                <li className={`hover:scale-110 text-purple-600 capitalize border-gray-100 border-[1px] bg-white max-md:w-72   cursor-pointer max-[534px]:w-72  max-[358px]:w-52 p-3 rounded text-center shadow-md shadow-gray-300`}>HOME</li>
+                <li className={`hover:scale-110 text-purple-600 capitalize border-gray-100 border-[1px] bg-white max-md:w-72   cursor-pointer max-[534px]:w-72  max-[358px]:w-52 p-3 rounded text-center shadow-md shadow-gray-300`}>search</li>
+                <li className={`hover:scale-110 text-purple-600 capitalize border-gray-100 border-[1px] bg-white max-md:w-72   cursor-pointer max-[534px]:w-72  max-[358px]:w-52 p-3 rounded text-center shadow-md shadow-gray-300`}>ABOUT US</li>
+                <li className={`hover:scale-110 text-purple-600 capitalize border-gray-100 border-[1px] bg-white max-md:w-72   cursor-pointer max-[534px]:w-72  max-[358px]:w-52 p-3 rounded text-center shadow-md shadow-gray-300`}>TOOLS</li>
+                <li className={`hover:scale-110 text-purple-600 capitalize border-gray-100 border-[1px] bg-white max-md:w-72   cursor-pointer max-[534px]:w-72  max-[358px]:w-52 p-3 rounded text-center shadow-md shadow-gray-300`}>SERVICES</li>
+                <li className={`hover:scale-110 text-purple-600 capitalize border-gray-100 border-[1px] bg-white max-md:w-72   cursor-pointer max-[534px]:w-72  max-[358px]:w-52 p-3 rounded text-center shadow-md shadow-gray-300`}>MORE</li>
+                <li className={`hover:scale-110 text-purple-600 capitalize border-gray-100 border-[1px] bg-white max-md:w-72   cursor-pointer max-[534px]:w-72  max-[358px]:w-52 p-3 rounded text-center shadow-md shadow-gray-300`}>login/signup</li>
+            </ul>
+        </div>
+    )
 }
 
 export default Sidebar

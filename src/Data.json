@@ -1,0 +1,22 @@
+[
+    {
+        "name": "luna",
+        "img":"/src/assets/cat1.jpg"
+    },
+    {
+        "name": "charlie",
+        "img":"/src/assets/cat7.jpeg"
+    }
+    ,
+    {
+        "name": "simba",
+        "img":"/src/assets/dog.jpeg"
+    },
+      
+    {
+        "name": "oliver",
+        "img":"/src/assets/cat4.jpeg"
+
+    }
+
+]
