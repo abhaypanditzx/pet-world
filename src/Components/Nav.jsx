@@ -71,8 +71,6 @@ function Nav() {
               <li className="hover:underline hover:scale-95 max-content  hover:text-gray-300 transition-[0.2s]   cursor-pointer">Feeding Your Dog</li>
               <li className="hover:underline hover:scale-95 max-content  hover:text-gray-300 transition-[0.2s]   cursor-pointer">Dog Behavior</li>
               <li className="hover:underline hover:scale-95 max-content  hover:text-gray-300 transition-[0.2s]   cursor-pointer">Dog Health & Wellness</li>
-              <li className="hover:underline hover:scale-95 max-content  hover:text-gray-300 transition-[0.2s]   cursor-pointer">Dog Training</li>
-              <li className="hover:underline hover:scale-95 max-content  hover:text-gray-300 transition-[0.2s]   cursor-pointer">Other Dog Information</li>
             </ul>
           </div>
           <div id="li1" className="h-fit p-2  w-fit">
@@ -81,12 +79,11 @@ function Nav() {
             </li>
             <ul id="ul" className="w-fit ml-2 p-3 popins capitalize  hidden h-fit ">
 <Link to="/CatAdo"><li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Cat Adoption</li></Link>
-              <li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Cat Breeds</li>
+             
+              <Link to="/CatBreeds"> <li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Cat Breeds</li> </Link>
               <li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Feeding Your Cat</li>
               <li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Cat Behavior</li>
               <li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Cat Health & Wellness</li>
-              <li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Cat Training</li>
-              <li className="hover:underline hover:scale-95 max-content hover:text-gray-300 transition-[0.2s]  cursor-pointer">Other Cat Information</li>
 
             </ul>
           </div>

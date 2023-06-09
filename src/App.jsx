@@ -8,6 +8,7 @@ import ShelterAndRescue from "./pages/ShelterAndRescue";
 import DogAdo from "./pages/DogAdo";
 import Footer from "./Components/Footer";
 import CatAdo from "./pages/CatAdo";
+import CatBreeds from "./pages/CatBreeds";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
   <Route path="ShelterAndRescue" element={<ShelterAndRescue/>}/>
   <Route path="DogAdo" element={<DogAdo/>}/>
   <Route path="CatAdo" element={<CatAdo/>}/>
+  <Route  path="CatBreeds" element={<CatBreeds/>}/>
 </Routes>
 <Footer/>
 </div>

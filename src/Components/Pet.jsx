@@ -33,7 +33,7 @@ function Pet(props) {
       </h1>
       <form className="flex input sm:p-10 space-x-1 sm:h-fit w-full sm:flex-row flex-col justify-around sm:py-10 items-center  ">
         <input   placeholder="Enter City, State or ZIP" className="sm:w-auto input w-40   " />
-        <select className="border-[3px] border-[#ccc] p-3">
+        <select className="border-[1px] border-[#ccc] p-3">
           <option color="red" className="bg-purple-100 " value="10">
             {a + 10 + b}
           </option>

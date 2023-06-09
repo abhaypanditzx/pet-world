@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import {ArrowLeftIcon} from "@heroicons/react/24/outline"
+import { Link } from 'react-router-dom';
 function About() {
   const form = useRef();
 
@@ -21,7 +22,9 @@ function About() {
   return (
     <div className='h-screen flex flex-col items-center    w-full  '>
       <div  className=" bg-purple-300 list-none    h-[10vh] w-full absolute shadow-md shadow-gray-500   flex justify-center items-center cursive uppercase  ">
-        <li  className='absolute  left-2 flex space-x-1 '> <ArrowLeftIcon className='h-6 w-6'/></li>
+        <Link className='absolute  left-2 flex space-x-1 ' to="/">
+         <ArrowLeftIcon className='h-6 w-6'/>
+        </Link>
         <p  className="  text-5xl     cursive uppercase  ">about us</p>
         </div>
 

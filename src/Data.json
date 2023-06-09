@@ -1,22 +1,18 @@
 [
     {
-        "name": "luna",
+        "name":"bruno",
+        "img":"/src/assets/dog.jpeg"
+    },
+    {
+        "name":"kily",
         "img":"/src/assets/cat1.jpg"
     },
     {
-        "name": "charlie",
-        "img":"/src/assets/cat7.jpeg"
-    }
-    ,
-    {
-        "name": "simba",
-        "img":"/src/assets/dog.jpeg"
-    },
-      
-    {
-        "name": "oliver",
+        "name":"kimmy",
         "img":"/src/assets/cat4.jpeg"
-
+    },
+    {
+        "name":"lisa",
+        "img":"/src/assets/cat3.jpeg"
     }
-
 ]

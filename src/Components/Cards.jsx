@@ -7,7 +7,6 @@ constructor(props) {
   this.state = {
     data: this.data,
   }
-  console.log("hi")
 }
   render() {
     return (
