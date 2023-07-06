@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 function Sidebar() {
-    const [bg, setBg] = useState("bg-gray-900")
+    const [bg, setBg] = useState("bg-transparent")
     function hide() {
         let bars = document.getElementById("bars")
         let ul = document.getElementById("ul")
@@ -11,8 +11,8 @@ function Sidebar() {
             ul.style.display = "flex"
             bars.style.display = "none"
         } 
-        x.style.color = "#111827"
-        setBg("[#EFEEF1]")
+        x.style.color = "white"
+        setBg("bg-gray-900")
     }
 
     function hide2() {
@@ -24,13 +24,13 @@ function Sidebar() {
             ul.style.display = "none"
             x.style.display = "none"
         }
-        setBg("bg-gray-900")
+        setBg("bg-transparent")
     }
 
 
     return (
-        <div className={`w-screen h-[100vh]  bg-${bg} flex justify-center items-center   absolute right-0   top-0 z-50  sm:hidden `}>
-            <div className='flex p-1 justify-between absolute right-0 top-1 '>
+        <div className={`w-screen h-[100vh] ${bg}  flex justify-center items-center   absolute right-0   top-0 z-50  sm:hidden `}>
+            <div className='flex p-1 justify-between  absolute right-0 top-1 '>
                 <Bars3Icon onClick={hide} id="bars" className={`w-8 hover:scale-110   text-white cursor-pointer  h-8`} />
                 <XMarkIcon onClick={hide2} id='x' className={`w-8 hidden hover:scale-110   text-white cursor-pointer  h-8`} />
             </div>
